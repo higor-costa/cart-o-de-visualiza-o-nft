@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-item1: hsl(178, 100%, 50%);
+    --cor-item2: hsl(215, 51%, 70%);
+
+    --cor-principal: hsl(217, 54%, 11%);
+    --cor-card: hsl(216, 50%, 16%);
+    --cor-linha: hsl(215, 32%, 27%);
+    --cor-branco: hsl(0, 0%, 100%);
+
+    --font-principal: 'Outfit', sans-serif;
+}
+
+.principal {
+    height: 100vh;
+    max-width: 1440px;
+    font-family: var(--font-principal);
+    background-color: var(--cor-principal);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: var(--cor-card);
+    width: 20rem;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.315);
+}
+
+.card .cabecalho__imagem {
+    background-image: url('/images/image-equilibrium.jpg');
+    width: 100%;
+    height: 16em;
+    background-size: cover;
+    background-position: center;
+}
+
+.items {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
