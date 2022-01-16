@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 :root {
@@ -17,10 +18,18 @@
 
     --font-principal: 'Outfit', sans-serif;
 }
+body {
+    height: 100vh;
+    background-color: var(--cor-principal);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .principal {
     height: 100vh;
-    max-width: 1440px;
+    width: 100%;
     font-family: var(--font-principal);
     background-color: var(--cor-principal);
     display: flex;
@@ -30,27 +39,109 @@
 }
 
 .card {
+    position: relative;
     background-color: var(--cor-card);
     width: 20rem;
     height: 30rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     padding: 25px;
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.315);
 }
 
 .card .cabecalho__imagem {
-    background-image: url('/images/image-equilibrium.jpg');
     width: 100%;
-    height: 16em;
-    background-size: cover;
-    background-position: center;
+    height: 70%;
+    margin-bottom: 10px;
+}
+
+.cabecalho__titulo {
+    color: var(--cor-branco);
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.cabecalho__paragrafo, .items .item2, .card__creditos .creditos {
+    color: var(--cor-item2);
+    font-weight: 600;
 }
 
 .items {
     display: flex;
     justify-content: space-between;
     width: 100%;
+}
+
+.items .items__esquerda, .items__direita {
+    display: flex;
+    align-items: center;   
+}
+
+.items .item1, .item2 {
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.items .item1 {
+    color: var(--cor-item1);
+}
+
+.items .icone1, .icone2 {
+    margin-right: 5px;
+    height: 70%;
+}
+
+.card__creditos::before {
+    content: '';
+    position: absolute;
+    background-color: var(--cor-linha);
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: 100%;
+}
+
+.card__creditos {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.card__creditos .avatar {
+    width: 10%;
+    border: 2px solid lightgray;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.card__creditos .creditos--nome {
+    color: var(--cor-branco);
+}
+
+.rodape {
+    background-color: var(--cor-card);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.rodape .challenge {
+    color: var(--cor-item2);
+    font-size: 12px;
+}
+
+.rodape .challenge a {
+    transition: 0.3s ease-in-out;
+}
+
+.rodape .challenge a:hover{
+    color: var(--cor-item1);
+}
+
+.rodape a {
+    color: var(--cor-branco);
 }
