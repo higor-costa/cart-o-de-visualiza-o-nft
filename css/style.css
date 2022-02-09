@@ -22,7 +22,6 @@
 
 body {
     height: 100vh;
-    max-width: 1440px;
     background-color: var(--cor-principal);
     display: flex;
     flex-direction: column;
@@ -31,7 +30,7 @@ body {
 }
 .principal {
     height: 100%;
-    width: 100%;
+    max-width: 1440px;
     font-family: var(--font-principal);
     background-color: var(--cor-principal);
     display: flex; 
